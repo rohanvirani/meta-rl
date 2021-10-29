@@ -50,12 +50,12 @@ def run_episode(
         # take action, use env.step
 
         next_state, reward, done, info = env.step(action.item())
-        print(next_state, reward, done, info)
+        #print(next_state, reward, done, info)
 
         # add transition to episode_experience as a tuple of
         # (state, action, reward, next_state, goal)
 
-        episode_experience.append((state, action, reward, next_state, info['goal_vector']))
+        episode_experience.append((state, action, reward, next_state, goal_state))
 
         # update episodic return
 
