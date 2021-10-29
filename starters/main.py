@@ -7,13 +7,13 @@ from torch.utils import tensorboard
 
 import bit_flip_env
 import gym
-#import multiworld
+import multiworld
 import sawyer_action_discretize
 
 import trainer
 from utils import HERType
 
-#multiworld.register_all_envs()
+multiworld.register_all_envs()
 
 
 if __name__ == '__main__':

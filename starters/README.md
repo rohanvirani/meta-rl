@@ -4,11 +4,11 @@ First, we discuss the general setup for local machines.
 ## (1) Installing MuJoCo:
 For all the commands, change `mujoco200_linux` to `mujoco200_macos` if installing MuJoCo on a Mac device.
 ```bash
-wget https://www.roboti.us/download/mujoco200_macos.zip
-unzip mujoco200_macos.zip
-rm mujoco200_macos.zip
+wget https://www.roboti.us/download/mujoco200_linux.zip
+unzip mujoco200_linux.zip
+rm mujoco200_linux.zip
 mkdir ~/.mujoco
-mv mujoco200_macos ~/.mujoco/mujoco200
+mv mujoco200_linux ~/.mujoco/mujoco200
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco200/bin
 
 ```
@@ -20,7 +20,7 @@ Place the mjkey.txt (shared on Ed) into `~/.mujoco/` folder.
 
 Create the virtual environment, and install the dependencies in the requirements.txt.
 ```bash
-virtualenv --python=/rohanvirani/bin/python3.7 hw3_env
+virtualenv --python=/usr/bin/python3.7 hw3_env
 source hw3_env/bin/activate
 pip install -r requirements.txt
 ```
